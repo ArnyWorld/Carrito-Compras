@@ -1,0 +1,40 @@
+.tachado{
+    text-decoration: line-through;
+    color:#292b2c!important;
+    font-weight: normal!important;
+}
+#lista-compras{
+    /*border:1px solid silver;*/
+    background-image: url(img/agenda1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+}
+.entrada{
+    margin-top: 35px;
+}
+.header h1{
+    font-family: 'Roboto', sans-serif;
+}
+.text-success{
+    font-size: 1.35rem;
+}
+@media (max-width:768px){
+    #lista-compras{
+        width:75%!important;
+    }
+    .header h1{
+        font-size: 2rem;
+    }
+    
+}
+@media (max-width:480px){
+    #lista-compras{
+        width:100%!important;
+    }
+    .header h1{
+        font-size: 1.5rem;
+    }
+    
+}
