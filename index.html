@@ -14,9 +14,9 @@
              <div class="header">
                 <h1 class="text-md-center text-center">{{ header.toLocaleUpperCase() }}</h1>
             </div>
-            <div v-if="estado === 'edit' " class="entrada">
-                <input type="text" placeholder="Agregar objetos" v-model="newUtil" @keyup.enter="añadirUtil()"  class="  col-12 col-sm-6 col-xl-8 form-control d-inline-block mb-3 ml-3">
-                <input type="submit" v-bind:disabled="newUtil.length ===0" value="Añadir" @click="añadirUtil()" class=" btn btn-success col-xl-3 col-sm-2 col-12 mt-0 font-weight-bold">
+            <div v-if="estado === 'edit' " class="entrada d-flex justify-content-between flex-wrap">
+                <input type="text" placeholder="Agregar objetos" v-model="newUtil" @keyup.enter="añadirUtil()"  class="col-xl-8 col-lg-8  col-md-8 col-sm-8 col-12 form-control  mb-3">
+                <input type="submit" v-bind:disabled="newUtil.length ===0" value="Añadir" @click="añadirUtil()" class=" btn btn-success col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mt-0 font-weight-bold">
             </div>
             
             <ul>
@@ -25,7 +25,7 @@
             <p v-if="utiles.length === 0" class="col-auto  p-2 bg-danger text-white rounded mt-4 text-center font-weight-bold">No existen elementos en la lista</p>
         <div class=" d-flex justify-content-between">
             <button v-if="estado === 'default'" class=" btn btn-primary col-xl-5 col-lg-5 col-md-5 mt-2 mb-3" @click="cambiarEstado('edit')">Agregar</button>
-            <button v-else class="btn btn-cancel bg-secondary col-xl-6 col-sm-2 col-12 mb-3 text-white" @click="cambiarEstado('default')">Cancelar</button>
+            <button v-else class="btn btn-cancel bg-secondary col-12 mt-2 mb-3 text-white" @click="cambiarEstado('default')">Cancelar</button>
             <button v-if="estado === 'default'" class="btn btn-danger col-xl-5 col-lg-5 col-md-5 mt-2 mb-3 " @click="cambiarEstado('default'), limpiar()">Limpiar</button>
         </div>
         </div>
